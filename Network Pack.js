@@ -27,6 +27,7 @@ function networkpack(arr1, arr2) {
                 result.push(-1);
 
             } else {
+                occpied = 0;
                 starttime = starttime > qee[i].arrtime ? starttime : qee[i].arrtime;
                 result.push(starttime);
                 arrtimes.push(qee[i].arrtime);
@@ -36,7 +37,7 @@ function networkpack(arr1, arr2) {
         }
     }
 
-    return result;
+    return `Processing start time of the packs=>${result.join(" ")}`;
 }
 
 
@@ -58,7 +59,7 @@ const packarr2 = [
     [0, 1],
     [0, 1],
     [1, 3],
-    [2, 3]
+    [1, 3]
 ];
 
 console.log(networkpack(bffer, packarr));
